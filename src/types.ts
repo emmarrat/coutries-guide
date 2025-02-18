@@ -4,3 +4,16 @@ export interface IShortCountry {
   independent: boolean
 }
 
+export interface IFullCountry {
+  name: string
+  region: string
+  population: number
+  borders:string[]
+  flags: {
+    svg: string
+  }
+}
+
+export interface IFullCountryUpdated extends IFullCountry {
+  bordersFull: IShortCountry[]
+}
